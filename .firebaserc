@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "firevoightkampff"
+  },
+  "targets": {
+    "firevoightkampff": {
+      "hosting": {
+        "FireVoightKampff": [
+          "firevoightkampff"
+        ]
+      }
+    }
+  }
+}
