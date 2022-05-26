@@ -1,5 +1,12 @@
 <section>
-  <article>
-
+  <article *ngFor="let s of s.suivi; let i=index">
+    Suspect : {{ s.uid }}
+    <ul>
+      <li *ngFor="let rep of s.reponses">
+        <p>La question : {{ rep.enonce }}</p>
+        <p>La réponse choisie : {{ rep.reponse }}</p>
+        <p>Le score bizarre : {{ rep.score }}</p>
+      </li>
+    </ul>
   </article>
 </section>
