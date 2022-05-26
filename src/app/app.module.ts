@@ -11,14 +11,24 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ConnexionComponent } from './pages/connexion/connexion.component';
+import { QuestionComponent } from './pages/question/question.component';
+import { QuestionsComponent } from './pages/questions/questions.component';
+import { FormsModule } from '@angular/forms';
+import { CreeCompteComponent } from './pages/cree-compte/cree-compte.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConnexionComponent,
+    QuestionComponent,
+    QuestionsComponent,
+    CreeCompteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),

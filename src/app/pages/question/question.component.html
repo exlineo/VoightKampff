@@ -1,0 +1,13 @@
+<section>
+  <h1>Bienvenue dans ce test de Voight Kampff</h1>
+  <article>
+    <h2>{{ question.enonce }}</h2>
+    <form (submit)="next()">
+      <label *ngFor="let q of question.reponses; let i=index">
+        <input type="radio" [value]="q" [name]="'reponse' + n" [(ngModel)]="reponse">
+        <p>{{ q.reponse }}</p>
+      </label>
+      <button class="valide">></button>
+    </form>
+  </article>
+</section>

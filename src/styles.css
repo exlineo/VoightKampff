@@ -1,1 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --vert:#32a852;
+  --rose:#a8327f;
+  --bleu:#233d78;
+  --orange:#ad4e13;
+  --jaune:#dec92a;
+  --sombre:#171717;
+  --clair:#f2f0f0;
+  --gris:#c2c2c0;
+}
+html, body, main, app-root{
+  width:100vw;
+  height:100vh;
+  padding:0;
+  margin:0;
+  display:flex;
+  background-color: var(--clair);
+  color:var(--sombre);
+  font-family: 'Space Grotesk', sans-serif;
+}
+h1{
+  font-size:36px;
+  font-weight:300;
+}
+h2{
+  font-size:24px;
+}
+main{
+  background: url('assets/images/bg_accueil.jpg') 50% no-repeat;
+  background-size: cover;
+}
+main > *:nth-child(2){
+  margin:auto;
+}
+section{
+  display: flex;
+  flex-flow:column nowrap;
+  background-color: var(--clair);
+  margin:auto;
+  padding:15px 30px;
+  box-sizing: border-box;
+}
+main > * > section{
+  width:50vw;
+}
+article{
+  display:flex;
+  flex-flow:column nowrap;
+  margin:20px;
+  padding:10px;
+  box-sizing: border-box;
+}
+a{
+  color:var(--bleu);
+  text-decoration: none;
+  transition:all .3s ease;
+}
+a:hover{
+
+}
+form{
+  display:flex;
+  margin:auto;
+  flex-flow:column nowrap;
+}
+input{
+  border:none;
+  background-color: var(--gris);
+  transition: all .3s ease;
+  padding:8px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+input:hover{
+  background-color: var(--sombre);
+  color:var(--clair);
+}
+input[type="submit"], button.valide{
+  background-color: var(--vert);
+}
+input[type="submit"]:hover, button:hover.valide{
+  background-color: var(--orange);
+}
+input[type="reset"], button.reset{
+  background-color: var(--jaune);
+}
+input[type="reset"]:hover, button:host.reset{
+  background-color: var(--orange);
+}
+[type=radio],
+[type=checkbox] {
+   -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}
+
+/**
+ * Giving Checkbox & Radio not checked a new appearance
+ */
+
+[type=radio],
+[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #cccccc;
+  margin-right: 8px;
+  position: relative;
+}
+
+/**
+ * Giving Checkbox & Radio checked state a new appearance
+ */
+
+[type=radio]:checked::before,
+[type=checkbox]:checked::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color:var(--jaune);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+/* input[type="radio"]{
+  padding:12px;
+  margin:5px;
+  border: 1px solid var(--jaune);
+}
+input[type="radio"]{
+  padding:12px;
+  margin:5px;
+  border: 1px solid var(--jaune);
+} */
+fieldset, label{
+  border:none;
+  display: flex;
+  flex-flow:row nowrap;
+  align-items: center;
+}
+button{
+  border:none;
+  padding:15px;
+  transition: all .3s ease;
+  cursor: pointer;
+  color:var(--clair);
+}
+article button{
+  margin:20px auto 0;
+}
+.icone{
+  display: flex;
+  border-radius: 50%;
+  font-size:21px;
+  font-weight: 700;
+  background-color:var(--bleu);
+  color: var(--clair);
+  transition:all .3s ease;
+  padding:5px;
+  width:30px;
+  height:30px;
+  justify-content: space-around;
+  align-items: center;
+}
+.icone:hover{
+  background-color: var(--sombre);
+}
+.aide{
+  position:absolute;
+  z-index:10;
+  right:30px;
+  bottom:30px;
+}
+.oeil{
+  position:absolute;
+  z-index:10;
+  left:30px;
+  bottom:30px;
+}
+.accueil{
+  position:absolute;
+  z-index:10;
+  left:30px;
+  top:30px;
+}
+.admin{
+  position:absolute;
+  z-index:10;
+  right:30px;
+  top:30px;
+}
+.oeil img, .accueil img, .admin img{
+  width:24px;
+  height:24px;
+}

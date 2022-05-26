@@ -1,0 +1,14 @@
+<section>
+  <form (submit)="connexion()">
+    <h1>Voight Kampff</h1>
+    <h2>Se connecter</h2>
+    <input name="id" [(ngModel)]="compte.mail" placeholder="Identifiant">
+    <input type="password" name="mdp" [(ngModel)]="compte.pass" placeholder="Mot de passe">
+    <input type="submit" value="Se connecter">
+    <input type="reset" value="Annuler">
+  </form>
+  <article>
+    <a routerLink="/compte">Créer un compte</a>
+    <a routerLink="/oublie">Mot de passe oublié ?</a>
+  </article>
+</section>
