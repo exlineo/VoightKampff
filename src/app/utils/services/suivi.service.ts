@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Database, objectVal, ref, set, list } from '@angular/fire/database';
+import { Database, objectVal, ref, set } from '@angular/fire/database';
 import { first, map } from 'rxjs/operators';
 import { CompteI, SuiviI } from '../modeles/compte-i';
 import { AuthService } from './auth.service';
@@ -12,9 +12,7 @@ export class SuiviService {
   suivi:Array<any> = [];
 
 
-  constructor(private rt:Database, private auth:AuthService) {
-    // this.getRTDB();
-  }
+  constructor(private rt:Database, private auth:AuthService) {}
 
   /** Surveillance des données en temps réel */
   /** Get realtime data */
@@ -28,10 +26,7 @@ export class SuiviService {
       }
     );
   }
-  getReponses() {
-    // const msg = list();
-    // msg.valueChanges();
-  }
+  /** Ecrire des données dans la base en temps réel */
   setRTDB(msg:any){
     msg['uid'] = this.auth.compte.uid;
     set(ref(this.rt, 'users/'+this.auth.compte.uid), msg);
