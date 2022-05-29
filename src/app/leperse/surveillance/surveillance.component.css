@@ -1,0 +1,16 @@
+section{
+    width:calc(100vw - 90px);
+    flex-flow:row wrap;
+    background:none;
+}
+article{
+    margin:10px;
+    box-shadow: 0 0 4px black;
+    width:45%;
+    box-sizing: border-box;
+    background:white;
+}
+h1{
+    width:100%;
+    text-align:center;
+}
