@@ -9,5 +9,6 @@ export const environment = {
     authDomain: 'firevoightkampff.firebaseapp.com',
     messagingSenderId: '173254517285',
   },
+  vapidKey: 'BIDPctnXHQDIjcOXxDS6qQcz-QTws7bL8v7UPgFnS1Ky5BZL3jS3-XXfxwRHmAUMOk7pXme7ttOBvVoIfX57PEo',
   production: true
 };
